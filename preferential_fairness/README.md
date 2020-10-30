@@ -13,7 +13,7 @@
 
 This repository provides the implementation for training preferentially fair classifiers: the classifiers where the benefits (fraction accepted into the positive class) for different groups might be disparate, yet each group would prefer their own decision outcomes.
 
-For more details, have a look at our <a href="https://arxiv.org/abs/1707.00010" target="_blank">paper</a>.
+For more details, have a look at the <a href="https://arxiv.org/abs/1707.00010" target="_blank">paper</a>.
 
 ### 1.1. Generating a sample dataset
 Lets start off by generating a sample dataset.
@@ -60,9 +60,9 @@ Accuracy: 0.840
 ||  1  || 0.84 (0.81) ||
 ```
 
-The "s" column denotes the protected (sensitive feature value 0) and non-protected group. The "frac_pos" column shows the fraction of points from each group selected into the positive class. The number in parentheses show the fraction in positive class had this group been classified using the classifier of the other group. In this case, we see that neither of the group is better off (getting more beneficial outcomes) by using the classifier of the other group. However, we do see examples in certain datasets where one group would prefer the classifier of the other group (details in Section 5 of our paper).
+The "s" column denotes the protected (sensitive feature value 0) and non-protected group. The "frac_pos" column shows the fraction of points from each group selected into the positive class. The number in parentheses show the fraction in positive class had this group been classified using the classifier of the other group. In this case, we see that neither of the group is better off (getting more beneficial outcomes) by using the classifier of the other group. However, we do see examples in certain datasets where one group would prefer the classifier of the other group (details in Section 5 of the paper).
 
-Notice that this classifier violates both treatment parity (disparate treatment)--it trains a separate classifier for each group as well as impact parity--its beneficial outcome rates are different for different groups. Treatment parity (or satisfying disparate treatment) and impact parity (or satisfying disparate impact) are two well-known fairness criteria considered in the literature. See Sections 1 and 2 of our paper (and the discussion therein) for more details.
+Notice that this classifier violates both treatment parity (disparate treatment)--it trains a separate classifier for each group as well as impact parity--its beneficial outcome rates are different for different groups. Treatment parity (or satisfying disparate treatment) and impact parity (or satisfying disparate impact) are two well-known fairness criteria considered in the literature. See Sections 1 and 2 of the paper (and the discussion therein) for more details.
 
 <img src="synthetic_data_demo/img/unconstrained.png" width="500px" style="float: right;">
 
@@ -80,7 +80,7 @@ cons_params["cons_type"] = 0
 clf = LinearClf(loss_function, lam=0.01, train_multiple=False)
 clf.fit(x_train, y_train, x_sensitive_train, cons_params)
 ```
-This step uses the methodology introduced in our <a href="https://arxiv.org/abs/1507.05259" target="_blank">earlier AISTATS paper</a> for more details.
+This step uses the methodology introduced in the <a href="https://arxiv.org/abs/1507.05259" target="_blank">earlier AISTATS paper</a> for more details.
 
 The results for the fair classifier look like this:
 
@@ -171,7 +171,7 @@ Note that the group benefits satisfy both constraints.
 
 ### 1.5. Adult dataset
 
-We also provide a demo of our code on [Adult dataset](http://archive.ics.uci.edu/ml/datasets/Adult). For applying the fairness constraints on the adult dataset, execute the following commands:
+We also provide a demo of the code on [Adult dataset](http://archive.ics.uci.edu/ml/datasets/Adult). For applying the fairness constraints on the adult dataset, execute the following commands:
 
 ```shell
 $ cd adult_data_demo
