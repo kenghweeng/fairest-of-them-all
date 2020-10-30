@@ -18,7 +18,7 @@
 
 Imagine we are training classifiers on a given dataset and the learned classifier results in different misclassification rates for different demographic groups. Fair classification here corresponds to removing such disparities in misclassification rates from classification outcomes.
 
-For more details, have a look at our <a href="http://arxiv.org/abs/1610.08452" target="_blank">paper</a>.
+For more details, have a look at the <a href="http://arxiv.org/abs/1610.08452" target="_blank">paper</a>.
 
 ### 1.1. Generating a sample dataset
 Lets start off by generating a sample dataset.
@@ -79,7 +79,7 @@ cons_params = {"cons_type": cons_type,
 w_cons, acc_cons, s_attr_to_fp_fn_test_cons  = train_test_classifier()
 ```
 
-Notice that setting all values to 0 in _sensitive_attrs_to_cov_thresh_ means that the classifier should achieve 0 covariance between the sensitive feature (s1) value and distance to the decision boundary for the points misclassified as false positives. Refer to Section 4 of our <a href="http://arxiv.org/abs/1610.08452" target="_blank">paper</a> for more details.
+Notice that setting all values to 0 in _sensitive_attrs_to_cov_thresh_ means that the classifier should achieve 0 covariance between the sensitive feature (s1) value and distance to the decision boundary for the points misclassified as false positives. Refer to Section 4 of the <a href="http://arxiv.org/abs/1610.08452" target="_blank">paper</a> for more details.
 
 The results for the fair classifier look like this:
 
@@ -152,7 +152,7 @@ We see that: (i) disparity on both false positive as well as false negative rate
 
 ### 1.6. However...
 
-These shifts in boundary can be very different in different settings. For example, in certain cases (depending on the underlying data distribution), fixing unfairness w.r.t. false positive rates can also fix disparity on false negative rates (as we will see a little later). Similarly, the precise amount of accuracy that we have to trade-off to achieve fairness will also vary depending on the specific dataset. We experiment with some of these scenarios in Section 5 of our <a href="http://arxiv.org/abs/1610.08452" target="_blank">paper</a>.
+These shifts in boundary can be very different in different settings. For example, in certain cases (depending on the underlying data distribution), fixing unfairness w.r.t. false positive rates can also fix disparity on false negative rates (as we will see a little later). Similarly, the precise amount of accuracy that we have to trade-off to achieve fairness will also vary depending on the specific dataset. We experiment with some of these scenarios in Section 5 of the <a href="http://arxiv.org/abs/1610.08452" target="_blank">paper</a>.
 
 Also, one might wish for overall misclassification (irrespective of whether these misclassifications are false positives or false negative) to be the same. 
 Such scenarios can be simulated by passing ```cons_type=0``` to ```cons_params``` variable.
@@ -172,7 +172,7 @@ We can see that decreasing the covariance threshold value gives a continuous tra
 
 ### 1.8. ProPublica COMPAS dataset
 
-We also provide a demo of our scheme with <a href="https://github.com/propublica/compas-analysis" target="_blank">ProPublica COMPAS dataset</a>. For seeing the effect of fairness constraints on this dataset, execute the following commands:
+We also provide a demo of the scheme with <a href="https://github.com/propublica/compas-analysis" target="_blank">ProPublica COMPAS dataset</a>. For seeing the effect of fairness constraints on this dataset, execute the following commands:
 
 ```shell
 $ cd propublica_compas_data_demo/
@@ -197,7 +197,7 @@ Accuracy: 0.659
 ||  1  || 0.25 || 0.50 ||
 ```
 
-You will notice that in this dataset, controlling for unfairness w.r.t. false positive rates also helps control unfairness on false negative rates (rather than making it worse, or not affecting it at all). For more discussion, please see Section 5 of our <a href="http://arxiv.org/abs/1610.08452" target="_blank">paper</a>.
+You will notice that in this dataset, controlling for unfairness w.r.t. false positive rates also helps control unfairness on false negative rates (rather than making it worse, or not affecting it at all). For more discussion, please see Section 5 of the <a href="http://arxiv.org/abs/1610.08452" target="_blank">paper</a>.
 
 ## 2. Using the code
 
