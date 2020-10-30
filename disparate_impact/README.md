@@ -2,7 +2,7 @@
 
 ## 1. Fair classification demo
 
-Fair classification corresponds to a scenario where we are learning classifiers from a dataset that is biased towards/against a specific demographic group, yet the classifier predictions are fair and do not show the biases contained in the data. For more details, have a look at Section 2 of our [paper](http://arxiv.org/abs/1507.05259).
+Fair classification corresponds to a scenario where we are learning classifiers from a dataset that is biased towards/against a specific demographic group, yet the classifier predictions are fair and do not show the biases contained in the data. For more details, have a look at Section 2 of the [paper](http://arxiv.org/abs/1507.05259).
 
 ### 1.1. Generating a biased dataset
 Lets start off by generating a sample dataset where class labels are biased towards a certain group.
@@ -27,7 +27,7 @@ Protected in positive class: 358 (33%)
 P-rule is: 47%
 ```
 
-The p-rule is essentially the ratio of (fractions of) protected and non-protected examples in the positive class. According to the [doctrine of disparate impact](https://en.wikipedia.org/wiki/Disparate_impact), fair systems should maintain a p-rule of at least 80%. More discussion on p-rule can be found in our [paper](http://arxiv.org/pdf/1507.05259.pdf) (Section 2).
+The p-rule is essentially the ratio of (fractions of) protected and non-protected examples in the positive class. According to the [doctrine of disparate impact](https://en.wikipedia.org/wiki/Disparate_impact), fair systems should maintain a p-rule of at least 80%. More discussion on p-rule can be found in the [paper](http://arxiv.org/pdf/1507.05259.pdf) (Section 2).
 
 ### 1.2. Training an unconstrained classifier on the biased data
 
@@ -61,7 +61,7 @@ We can see that the classifier decisions reflect the biases contained in the ori
 
 ### 1.3. Optimizing classifier accuracy subject to fairness constraints
 
-Next, we will try to make these outcomes fair by still **optimizing for classifier accuracy**, but **subject it to fairness constraints**. Refer to Section 3.2 of our [paper](http://arxiv.org/pdf/1507.05259.pdf) for more details.
+Next, we will try to make these outcomes fair by still **optimizing for classifier accuracy**, but **subject it to fairness constraints**. Refer to Section 3.2 of the [paper](http://arxiv.org/pdf/1507.05259.pdf) for more details.
 
 ```python
 apply_fairness_constraints = 1 # set this flag to one since we want to optimize accuracy subject to fairness constraints
@@ -92,7 +92,7 @@ The figure shows the original decision boundary (without any constraints) and th
 
 ###1.4. Optimizing fairness subject to accuracy constraints
 
-Now lets try to **optimize fairness** (that does not necessarily correspond to a 100% p-rule) **subject to a deterministic loss in accuracy**. The details can be found in Section 3.3 of our [paper](http://arxiv.org/pdf/1507.05259.pdf).
+Now lets try to **optimize fairness** (that does not necessarily correspond to a 100% p-rule) **subject to a deterministic loss in accuracy**. The details can be found in Section 3.3 of the [paper](http://arxiv.org/pdf/1507.05259.pdf).
 
 ```python
 apply_fairness_constraints = 0 # flag for fairness constraint is set back to0 since we want to apply the accuracy constraint now
@@ -121,7 +121,7 @@ You can experiment with more values of gamma to see how allowing more loss in ac
 
 ### 1.5. Constraints on misclassying positive examples
 
-Next, lets try to train a fair classifier, however, lets put an additional constraint: do not misclassify any non-protected points that were classified in positive class by the original (unconstrained) classifier! The idea here is that we only want to promote the examples from protected group to the positive class, without demoting any non-protected points from the positive class (this might be a business necessity in many scenarios). Details of this formulation can be found in Section 3.3 of our [paper](http://arxiv.org/pdf/1507.05259.pdf). The code works as follows:
+Next, lets try to train a fair classifier, however, lets put an additional constraint: do not misclassify any non-protected points that were classified in positive class by the original (unconstrained) classifier! The idea here is that we only want to promote the examples from protected group to the positive class, without demoting any non-protected points from the positive class (this might be a business necessity in many scenarios). Details of this formulation can be found in Section 3.3 of the [paper](http://arxiv.org/pdf/1507.05259.pdf). The code works as follows:
 
 ```python
 apply_fairness_constraints = 0 # flag for fairness constraint is set back to0 since we want to apply the accuracy constraint now
@@ -168,7 +168,7 @@ We can see that decreasing the covariance threshold value gives a continuous tra
 
 ###1.7. Adult data
 
-We also provide a demo of our code on [Adult dataset](http://archive.ics.uci.edu/ml/datasets/Adult). For applying the fairness constraints on the adult dataset, execute the following commands:
+We also provide a demo of the code on [Adult dataset](http://archive.ics.uci.edu/ml/datasets/Adult). For applying the fairness constraints on the adult dataset, execute the following commands:
 
 ```shell
 $ cd adult_data_demo
