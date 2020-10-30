@@ -24,8 +24,6 @@ Muhammad Bilal Zafar, Isabel Valera, Manuel Gomez Rodriguez, Krishna P. Gummadi,
 
 #### Using the code
 
-1. If you want to learn more about impact parity as described in [1], please navigate to the directory "disparate_impact".
-2. If you want to learn more about mistreatment parity as described in [2], please navigate to the directory "disparate_mistreatment".
-2. If you want to learn more about group-based, Pareto-optimal classifiers as described in [3], please navigate to the directory "preferential_fairness".
-
-Please cite the corresponding paper when using the code.
+1. If you want to learn more about <u>impact parity</u> as described in [1], please navigate to the directory "disparate_impact".
+2. If you want to learn more about <u>mistreatment parity</u> as described in [2], please navigate to the directory "disparate_mistreatment".
+2. If you want to learn more about <u>group-based, Pareto-optimal classifiers</u> as described in [3], please navigate to the directory "preferential_fairness".
