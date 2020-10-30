@@ -3,8 +3,8 @@
  
 This repository provides a logistic regression implementation in Python for the fair classification mechanisms introduced in the <a href="http://arxiv.org/abs/1507.05259" target="_blank">AISTATS'17</a>, <a href="https://arxiv.org/abs/1610.08452" target="_blank">WWW'17</a> and <a href="https://arxiv.org/abs/1707.00010" target="_blank">NIPS'17</a> papers.
 
-#### Summary Paper:
-We have summarised the key ideas discussed in the three aforementioned papers into a final report: "Who's the fairest of them all?". The report is "final_report.pdf".
+#### Keng Hwee's Summary Paper:
+We have summarised the key ideas discussed in the three aforementioned papers into a final report: "Who's the fairest of them all?". The report is "final_paper.pdf".
 
 #### Reference Papers:
 1. <a href="http://arxiv.org/abs/1507.05259" target="_blank">Fairness Constraints: Mechanisms for Fair Classification</a> <br>
