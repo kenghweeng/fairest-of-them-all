@@ -1,3 +1,4 @@
+# NUS Computing: CS6283
 # Who's the fairest of them all?
 
  
